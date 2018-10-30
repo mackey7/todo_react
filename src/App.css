@@ -1,32 +1,136 @@
 .App {
-  text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.headline {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 3px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.todo_input {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid white;
+    font-weight: 600;
+    letter-spacing: 2px;
+    background: #474375;
+    color: #ffffff;
 }
 
-.App-link {
-  color: #61dafb;
+.todo_input::-webkit-input-placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #ffffff;
+    opacity: 1;
+    /* Firefox */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.todo_input:-ms-input-placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #ffffff;
+    opacity: 1;
+    /* Firefox */
+}
+
+.todo-search::-webkit-input-placeholder,
+.todo_input::-webkit-input-placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #ffffff;
+    opacity: 1;
+    /* Firefox */
+}
+
+.todo-search:-ms-input-placeholder,
+.todo_input:-ms-input-placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #ffffff;
+    opacity: 1;
+    /* Firefox */
+}
+
+.todo-search::placeholder,
+.todo_input::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #ffffff;
+    opacity: 1;
+    /* Firefox */
+}
+
+.todo_input:focus,
+.todo-add-item:focus {
+    outline: none;
+}
+
+.todo-add-item {
+    background: firebrick;
+    border: 0px;
+    padding: 15px;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.todo-add-item:hover {
+    background: #5c0505;
+}
+
+.todo-item,
+.empty-task,
+.todo-search {
+    list-style: none;
+    color: #ffffff;
+    font-family: "Courier New", Courier, monospace;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    width: 300px;
+    height: 100%;
+    border: 1px solid #ffffff;
+    background: #474375;
+    padding: 20px 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.todo-item p {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.todo-item button {
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    border: 0;
+    background: inherit;
+    cursor: pointer;
+    color: rgb(128, 21, 21);
+    font-size: 30px;
+}
+
+.todo-item button:hover {
+    color: rgb(163, 29, 29);
+}
+
+.todo-search {
+    margin: 20px;
 }
